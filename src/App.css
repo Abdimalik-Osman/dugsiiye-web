@@ -1,38 +1,562 @@
-.App {
-  text-align: center;
+body {
+  font-family: poppins, sans-serif;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+}
+li {
+  list-style: none;
+}
+a:hover {
+  color: #000000;
+  opacity: 0.93;
+}
+.card {
+  border-radius: 10px;
+}
+.card img {
+  border-radius: 10px 10px 0 0;
+}
+.courses {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 2rem;
+}
+/* showcase */
+/* showcase section */
+#showcase {
+  background: url("./components/images/showcase.jpeg") no-repeat center
+    center/cover;
+  height: 100vh;
+  color: #fff;
+  border-radius: 20px 20px 0 0;
+  margin: 0 20px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#showcase .showcase-content {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  height: 100%;
+  opacity:0.9;
+  
+  /* overlay */
+  background: rgb(8, 59, 44);
+  border-radius: 20px 20px 0 0;
+  
+}
+#showcase .showcase-content h1 {
+  font-size: 60px;
+  font-weight: 900;
+  margin: 30px 0;
+}
+#showcase .showcase-content .btn {
+  padding: 13px 30px;
+  margin: 20px 10px;
+  border-radius: 5px;
+}
+#showcase .showcase-content .get-started {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+#showcase .showcase-content .btn-about:hover {
+  color: #fff !important;
+  background-color: rgb(14, 167, 116);
+}
+.bg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(18, 125, 89);
+  color: #fff;
+}
+/* navbar..................................... */
+nav form{
+  margin-right: 70px;
+}
+.logo {
+  width: 100px;
+  height: 65px;
+  margin: 0 30px;
+}
+
+.btn-sign-in {
+  padding: 8px 18px;
+  font-size: 16px;
+  color: gray;
+
+}
+.btn-sign-up {
+  background-color: #059669;
+  color: #fff;
+  padding: 8px 12px !important;
+  font-size: 1rem;
+  border-radius: 8px;
+
+}
+.btn-sign-up:hover {
+  background-color: #066e51;
+  color: #fff !important;
+}
+.react-navbar .nav-item {
+  font-size: 16px !important;
+  font-family: poppins, sans-serif !important;
+  align-self: center !important;
+  color: #000 !important;
+  font-family: poppins, sans-serif !important;
+  margin: 0 290px;
+}
+.react-navbar{
+  z-index: 2 !important;
+}
+.react-navbar .nav-item .nav-link{
+  color: #000 !important;
+  margin: 0 16px;
+  
+}
+.react-navbar .user-info{
+  margin-right: 50px;
+}
+.react-navbar .user-info .btn-sign-up{
+  color: #fff !important;
+  margin-left: 15px;
+}
+
+
+/* common classes */
+.title {
+  --tw-bg-opacity: 1;
+  background-color: rgba(16, 185, 129, var(--tw-bg-opacity));
+  font-size: 0.89rem;
+  border-radius: 99999px;
+}
+
+.l-heading {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+.lead {
+  font-size: 20px;
+  margin-bottom: 2rem;
+  color:white;
+  
+  padding: 0 230px;
+}
+
+.text-gray {
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99);
+  font-weight: 600;
+  font-size: 25px;
+}
+/* testimonials ......................... */
+.testimonials {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 50px;
+}
+.testimonial-container .text-gray{
+  font-size: 16px !important;
+  word-spacing: .4rem;
+  color: gray;
+}
+.testimonial-container h1{
+  font-weight: 900 !important;
+}
+.testimonial-container {
+  margin: 200px 0;
+}
+.testimonial-title {
+  color: green;
+  font-size: 20px;
+}
+.testimonial-body p {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.testimonials img {
+  border-radius: 100%;
+  width: 310px;
+  height: 300px;
+  align-self: center;
+}
+/* */
+/* questions............... */
+.questions {
+  display: flex;
+  gap: 30px;
+  font-family: poppins, sans-serif;
+  margin: 70px 0;
+}
+.question-title{
+  width:70%;
+}
+.questions p {
+  font-size:  16px;
+  color: #6b7280;
+}
+.questions h2 {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+/* footer */
+footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top:40px;
+  font-size: 20px;
+  color: #6b7280;
+}
+footer ul li {
+  padding: 10px;
+  list-style-type: none;
+}
+/* testitmonials */
+.wrapper p:before {
+  content: "\201C";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-right: 0.1em;
+  vertical-align: -0.4em;
+}
+
+.wrapper p:after {
+  content: "\201D";
+  font-size: 3em;
+  line-height: 0.1em;
+  margin-left: 0.1em;
+  vertical-align: -0.45em;
+}
+
+/* about us */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+}
+
+.about p {
+  --tw-text-opacity: 1;
+  color: rgba(75, 85, 99, var(--tw-text-opacity));
+  font-size: 22px;
+  line-height: 1.9;
+  padding: 0 300px;
+  text-justify: center;
+}
+.about h1 {
+  font-size: 44px !important;
+  line-height: 2rem !important;
+  margin: 25px 0;
+  font-weight: 800 !important;
+}
+/* contact us ............................. */
+.contact {
+  display: flex;
+  gap: 50px;
+  padding-right: 15px;
+}
+.contact .contact .contact-details,
+.contact .contact-form {
+  flex: 1;
+}
+.contact-details {
+  background-color: #047857;
+  padding: 10px;
+  color: #fff;
+}
+
+.contact-details h3 {
+  margin: 25px 0;
+}
+.contact-details p {
+  padding: 10px 0;
+  font-size: 16px;
+}
+.contact-details h6 {
+  padding: 8px 0;
+  font-size: 20px;
+}
+.contact-details ul {
+  display: flex;
+}
+.contact-details ul li {
+  padding: 10px 25px;
+}
+.contact-details ul li a {
+  color: #fff !important;
+  font-weight: bold !important;
+  font-size: 22px !important;
+}
+.contact .contact-form input {
+  background-color: #ffffff;
+  padding: 8px 12px !important;
+  margin-bottom: 10px;
+}
+.contact .contact-form input:focus {
+  outline: #047857 !important;
+}
+.contact .contact-form label {
+  margin: 10px 0;
+}
+/* register form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33%;
+  margin: auto;
+  padding:40px;
+}
+.register-form form {
+  background-color: white !important;
+}
+
+.register-form .form-group {
+  padding: 8px 0;
+}
+.register-form .form-group .alert{
+  padding: 3px;
+}
+.register-form input {
+  padding: 10px 50px;
+  border-radius: 8px;
+  border:none;
+  margin: 5px 0;
+}
+.register-form input:focus {
+  border-color: green important;
+  
+} 
+.register-form button {
+  width: 100%;
+  /* border-radius: 8px !important; */
+  background-color: rgb(44, 208, 142);
+}
+/* login */
+.login-btn{
+  background-color:rgb(30, 143, 30) !important;
+  color: rgb(19, 18, 18);
+  border: none !important;
+  outline: none !important;
+  color:white !important;
+  
+}
+.login-btn:hover{
+  background-color:rgb(22, 128, 22) !important;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* course showcase */
+#courses-showcase {
+  background: url("./components/images/courses.png") no-repeat center center/cover;
+  height: 62vh;
+  color: #fff;
+  margin-bottom: 150px;
+  margin-left: -52px;
+  margin-right: -52px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#courses-showcase .courses-showcase-content {
+  height: 62vh;
+  opacity:0.9;
+  
+  margin-left: -2px;
+  margin-right: 0px;
+  background: rgb(8, 59, 44);
+}
+#courses-showcase .courses-showcase-content h1 {
+  font-size: 60px;
+  font-weight: 900;
+}
+#courses-showcase .courses-showcase-content .l-heading{
+  padding-top:120px;
+  padding-left: 100px;
+}
+#courses-showcase .courses-showcase-content .lead{
+  padding-left: 100px;
+  padding-right: 500px;
+  padding-top: 10px;
+  
+}
+/* media queries responsive */
+@media only screen and (max-width: 768px) {
+  body{
+    overflow: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .logo{
+    margin-left:0%;
+  }
+  #showcase{
+    height:70vh;
+    border-radius: 0;
+    margin: 0 -10px;
+    padding: 0;
+  }
+  #showcase .showcase-content{
+    height:70vh;
+    border-radius: 0;
+    
+  }
+
+  #showcase .showcase-content h1{
+    font-size: 35px;
+    margin-top: 50px;
+  }
+  #showcase .showcase-content p{
+    font-size: 20px;
+    text-align: center;
+    text-justify: inter-word;
+    padding: 0 20px;
+  }
+  #showcase .showcase-content .get-started, .btn-about{
+    display:block;
+    width:380px;
+  }
+  .courses, .questions{
+    display: grid;
+    grid-template-columns: repeat(1,auto);
+    margin-bottom: 30px;
+  }
+  .text-gray{
+    font-size: 15px;
+  }
+  .questions {
+    margin-bottom:0;
+  }
+  .question-title{
+    width:100%;
+  }
+  .question-title h2{
+    font-size:28px;
+    
+  }
+  .testimonials{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin:0
+  }
+  .testimonial-container{
+    margin: 0;
+  }
+  
+  .testimonials img{
+    width:200px;
+    height: 200px
+  }
+  footer{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:center;
+    align-items:center;
+    font-size: 16px;
+    padding: 33px 0 !important;
+    /* margin:33px 0px !important; */
+  }
+  .about {
+    display:flex;
+    flex-direction: column;
+  }
+  .about p{
+    flex: 1;
+    padding: 0%;
+    font-size: 20px;
+    line-height:1.6
+  }
+  .about h1{
+    text-align: center;
+    font-size: 30px !important;
+    margin-bottom: 40px;
+  }
+   .contact{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .contact .contact-details{
+    padding:20px;
+  }
+
+  .contact .contact-details h3{
+    font-size:20px;
+    margin: 10px 0;
+
+  }
+  .contact .contact-details p{
+    font-size:16px;
+    margin: 0
+  }
+  .contact .contact-details h6{
+    margin: 0;
+    padding: 15px 0;
+    font-size:16px;
+  }
+  .contact .contact-details ul li{
+    padding:0 15px;
+    margin: 0
+  }
+  .contact-form h3{
+    margin-left: 35px;
+    margin-bottom:20px;
+    font-size:18px;
+  }
+  .contact-form .form-group{
+    width: 100%;
+    padding: 0 50px;
+  }
+  .contact-form button{
+    width: 80%;
+    float: none !important;
+    margin-left: 35px;
+    margin-top: 30px !important;
+  }
+  .register-form{
+    width: 100%;
+  }
+  .login{
+    width:80%
+  }
+  #courses-showcase .courses-showcase-content .l-heading{
+    padding-left:10px;
+    padding-top:100px;
+    font-size: 35px;
+  }
+  #courses-showcase .courses-showcase-content .lead{
+    padding-left:10px;
+    font-size:20px !important;
+    padding: 20px 10px;
+  }
+  #courses-showcase{
+    margin-bottom: 25px;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .nav-item{
+    display:grid !important;
+    grid-template-columns: repeat(2, auto);
+    margin-left: 0px !important;
+    margin-top: 25px !important;
+    margin-bottom: 20px !important;
+  }
+  .react-navbar .user-info .btn-sign-in{
+    display: none;
+  }
+  .react-navbar .user-info span{
+    display: block !important;
   }
 }
