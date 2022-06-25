@@ -36,7 +36,7 @@ a:hover {
   height: 100vh;
   color: #fff;
   border-radius: 20px 20px 0 0;
-  margin: 0 20px;
+  margin: 0 -20px;
 
 }
 
@@ -405,11 +405,12 @@ footer ul li {
     border-radius: 0;
     margin: 0 -10px;
     padding: 0;
+    
   }
   #showcase .showcase-content{
     height:70vh;
     border-radius: 0;
-    
+
   }
 
   #showcase .showcase-content h1{

@@ -18,9 +18,9 @@ function Courses(props) {
       />
     );
   }
-  return (
+return (
     <>
-      {/* <CourseShowcase /> */}
+      <CourseShowcase />
       
       <div className="my-5">
         <h1 className="text-center py-4 text-3xl sm:text-5xl fw-bold font-Inter ">
