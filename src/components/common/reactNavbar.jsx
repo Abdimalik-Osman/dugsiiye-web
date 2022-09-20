@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import Logo from "../images/main-logo.png";
 import {
   Container,
@@ -26,18 +26,18 @@ function ReactNavbar() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto nav-item">
-            <Link to="/" className="nav-link">
+            <NavLink to="/" className="nav-link">
               Home
-            </Link>
-            <Link to="/courses" className="nav-link">
+            </NavLink>
+            <NavLink to="/courses" className="nav-link">
               Courses
-            </Link>
-            <Link to="/about" className="nav-link">
+            </NavLink>
+            <NavLink to="/about" className="nav-link">
               About
-            </Link>
-            <Link to="/contact" className="nav-link">
+            </NavLink>
+            <NavLink to="/contact" className="nav-link">
               Contact
-            </Link>
+            </NavLink>
           </Nav>
           <Nav className="user-info">
             <Link to="/login" className="btn btn-sign-in">

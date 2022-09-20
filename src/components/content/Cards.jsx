@@ -1,11 +1,12 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 // import './App.css';
 function Cards(props){
   // cards component
   return (
     <>
       <div className="card shadow card-hover ">
-        <a href="/">
+        <Link to={`/courses/course/${props.id}`}>
           <img
             className="card-img-top"
             src={props.image}
@@ -21,7 +22,7 @@ function Cards(props){
           </div>
           <span className="mx-3 text-secondary">{props.lecturer}</span>
           <p className="mx-3 my-1  text-sm  text-gray">${props.price}</p>
-        </a>
+        </Link>
       </div>
     </>
   );

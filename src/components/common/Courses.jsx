@@ -10,6 +10,7 @@ function Courses(props) {
     return (
       <Cards
         key={course.id}
+        id={course.id}
         image={course.image}
         title={course.title}
         Cname={course.Cname}

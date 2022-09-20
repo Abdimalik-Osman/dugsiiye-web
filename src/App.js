@@ -1,3 +1,4 @@
+import {useState,useEffect} from 'react';
 import './App.css';
 import {
   BrowserRouter ,Routes,Route,Link,useParams} from "react-router-dom";
@@ -13,6 +14,7 @@ import Login from './components/usersInfo/login';
 import Courses from './components/common/Courses';
 import NotFound from './components/notFound';
 import ReactNavbar from './components/common/reactNavbar';
+import Course from './components/content/course';
 function App() {
 
   return (
@@ -23,6 +25,7 @@ function App() {
       <Routes> 
         <Route  exact path="/" element={<Home />} />
         <Route  path="/courses" element={<Courses/>} />
+        <Route  path="/courses/course/:id" element={<Course/>} />
         <Route  path="/about" element={<About/>} />
         <Route  path="/contact" element={<Contact/>}/>
         <Route  path="/login" element={<Login />} />
